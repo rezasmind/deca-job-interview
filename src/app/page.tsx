@@ -106,7 +106,7 @@ export default function HomePage() {
         transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
         className="mb-8 text-3xl font-bold text-black dark:text-black sm:text-4xl"
       >
-        من <span className="relative">
+        من <span className="relative mx-1">
           <span className="relative z-10 bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">رضا آقاجانی</span>
           <span className="absolute bottom-0 left-0 right-0 z-0 h-3 bg-indigo-100 dark:bg-indigo-900/40" style={{ bottom: '0.125em' }}></span>
         </span> هستم
@@ -118,7 +118,7 @@ export default function HomePage() {
         transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
         className="mb-12 text-xl font-medium text-black dark:text-black"
       >
-          نتیجهٔ تسک من برای دکا 
+        نتیجهٔ تسک من برای <span className="text-indigo-600 font-bold">دکا</span> 💼
       </motion.p>
 
       <motion.div
@@ -162,7 +162,7 @@ export default function HomePage() {
             href="/auth"
             className="group flex items-center gap-2 rounded-xl border-2 border-indigo-600 bg-white/80 px-6 py-3 text-base font-medium text-indigo-600 shadow-lg shadow-indigo-100/20 transition-all hover:bg-indigo-50 dark:bg-indigo-500/10 dark:text-indigo-400 dark:hover:bg-indigo-500/20 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           >
-                       <FaSignInAlt className="text-lg opacity-90 mr-2" />
+            <FaSignInAlt className="text-lg opacity-90" />
 
             ورود به برنامه
           </Link>
