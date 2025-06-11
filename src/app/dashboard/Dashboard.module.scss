@@ -1,0 +1,56 @@
+.container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ecfeff 25%, #f5f3ff 50%, #fdf2f8 75%, #fff7ed 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+
+  .welcome {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.loading {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.signOut {
+  background: transparent;
+  border: none;
+  color: #dc2626; // red-600
+  font-size: 0.875rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+} 

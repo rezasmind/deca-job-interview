@@ -1,0 +1,125 @@
+.container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ecfeff 25%, #f5f3ff 50%, #fdf2f8 75%, #fff7ed 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.6;
+    z-index: -1;
+    animation: blob 20s infinite alternate;
+  }
+
+  &::before {
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle at 30% 30%, #38bdf8 0%, transparent 60%);
+    top: -10%;
+    left: -10%;
+  }
+
+  &::after {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at 70% 70%, #c084fc 0%, transparent 60%);
+    bottom: -20%;
+    right: -10%;
+    animation-delay: 5s;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px) saturate(180%);
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    box-shadow: 0 10px 35px rgba(30, 41, 59, 0.1),
+                0 2px 8px rgba(30, 41, 59, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(30, 41, 59, 0.12),
+                  0 4px 12px rgba(30, 41, 59, 0.1);
+    }
+  }
+
+  .title {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #6366f1 0%, #14b8a6 50%, #eab308 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  .lottieHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 0.5rem;
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  100% {
+    transform: translateY(60px) translateX(40px) scale(1.2);
+  }
+}
+
+.success {
+  background-color: #16a34a !important; // green-600
+  &:hover {
+    background-color: #15803d !important; // green-700
+  }
+  &:focus-visible {
+    outline-color: #15803d !important;
+  }
+} 
