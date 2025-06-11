@@ -69,6 +69,7 @@ export default function AuthPage() {
           onChange={(e) => setPhone(e.target.value)}
           autoFocus
           error={error || undefined}
+          
         />
         <AnimatePresence mode="wait">
           {success ? (
