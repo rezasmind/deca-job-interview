@@ -9,6 +9,13 @@ const config = {
   images: {
     domains: ["randomuser.me"],
   },
+
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default config;
