@@ -31,43 +31,6 @@ export default function HomePage() {
         transition={{ duration: 8, ease: "easeInOut", repeat: Infinity }}
       />
       
-      {/* Decorative elements */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
-        transition={{ delay: 1, duration: 2 }}
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-5 overflow-hidden"
-      >
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute h-32 w-32 rounded-full bg-indigo-500/10"
-            initial={{
-              x: Math.random() * 100 - 50 + "%",
-              y: Math.random() * 100 - 50 + "%",
-              scale: Math.random() * 0.5 + 0.5,
-            }}
-            animate={{
-              x: [
-                Math.random() * 100 - 50 + "%",
-                Math.random() * 100 - 50 + "%",
-                Math.random() * 100 - 50 + "%",
-              ],
-              y: [
-                Math.random() * 100 - 50 + "%",
-                Math.random() * 100 - 50 + "%",
-                Math.random() * 100 - 50 + "%",
-              ],
-            }}
-            transition={{
-              duration: 20 + i * 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </motion.div>
 
       {/* Main Content */}
       <div className="z-10 w-full max-w-4xl">
